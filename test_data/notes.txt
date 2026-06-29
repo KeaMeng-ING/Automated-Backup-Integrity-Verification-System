@@ -1,0 +1,2 @@
+Sample notes file used as a third backup source.
+This exists so the restore sanity-check has multiple files to find.
