@@ -7,7 +7,7 @@ This script handles the full lifecycle of data safety: compressing files, protec
 
 * **Course Topic:** Secure System Administration & Scripting Automation
 * **Course Code:** CYBR 352 University Project
-* **Developer Names & IDs:** * Lead Engineer: [Your Name] (ID: [Your Student ID])
+* **Team Names:** ING Kea Meng, HOEURN Manet, LIM Petnikola
 
 ---
 
@@ -44,11 +44,6 @@ Creates an archive, prompts your keyboard secretly for a password, and clears st
 ./backup_guard.sh --verify backups/backup_2026-06-30_110000.tar.gz.enc
 ```
 
-### Simulating a Sandbox Dry-Run Recovery
-
-```bash
-./backup_guard.sh --restore-test backups/backup_2026-06-30_110000.tar.gz.enc
-```
 
 ### Performing Live Production Restorations
 
@@ -60,25 +55,7 @@ Creates an archive, prompts your keyboard secretly for a password, and clears st
 
 ## 4. Example Output
 
-### Normal Scenario: Successful Backup Run
-
-```text
-manet@system:~$ ./backup_guard.sh --backup
-2026-06-30 11:25:01 [INFO] Archiving source folders...
-Set a strong encryption passphrase: 
-2026-06-30 11:25:05 [INFO] Backup created and fingerprinted successfully: backup_2026-06-30_112501.tar.gz.enc
-```
-
-### Error Scenario: Failed Integrity Verification (Tampered File)
-
-```text
-manet@system:~$ ./backup_guard.sh --verify backup_2026-06-30_112501.tar.gz.enc
-2026-06-30 11:26:12 [INFO] Validating file signatures...
-backup_2026-06-30_112501.tar.gz.enc: FAILED
-2026-06-30 11:26:12 [ERROR] INTEGRITY CRITICAL CORRUPTION: Signatures do not match!
-```
-
----
+Outputs are stored in assets/
 
 ## 5. Functions
 
